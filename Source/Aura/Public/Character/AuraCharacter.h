@@ -13,5 +13,11 @@ UCLASS()
 class AURA_API AAuraCharacter : public AAuraCharacterBase
 {
 	GENERATED_BODY()
+
+public:
+	AAuraCharacter();
+
+	UPROPERTY(BlueprintReadWrite, Category="Movement")
+	FRotator RotationRate = FRotator(0.f, 400.f, 0.f);
 	
 };
