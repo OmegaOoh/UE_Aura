@@ -16,7 +16,13 @@ class AURA_API AAuraCharacter : public AAuraCharacterBase
 
 public:
 	AAuraCharacter();
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override;
 
+private:
+	void InitAbilityActorInfo();
+
+public:
 	UPROPERTY(BlueprintReadWrite, Category="Movement")
 	FRotator RotationRate = FRotator(0.f, 400.f, 0.f);
 	
